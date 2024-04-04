@@ -25,6 +25,7 @@ public class Inventory_UI : MonoBehaviour
     }
     private void Start()
     {
+        SetupSlots();
         Refresh();
     }
     void Update()
@@ -149,7 +150,8 @@ public class Inventory_UI : MonoBehaviour
     }
     public void SlotDrop(Slot_UI slot)
     {
-        Debug.Log("Dropped" + draggedSlot.name + "on" + slot.name);
+        player.inventory.MoveSlot(draggedSlot.slotID, slot.slotID);
+        Refresh();
     }
     private void MoveToMousePosition(GameObject toMove)
     {
@@ -163,4 +165,14 @@ public class Inventory_UI : MonoBehaviour
 
         }
     }
+    private void SetupSlots()
+    {
+        int counter = 0;
+        foreach (Slot_UI slot in slots)
+        {
+            slot.slotID = counter;
+            counter++;
+        }
+    }
+
 }

@@ -19910,6 +19910,8 @@ MonoBehaviour:
       count: 0
       maxAllowed: 0
       icon: {fileID: 0}
+  toolbar:
+    slots: []
 --- !u!1001 &921812523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21243,6 +21245,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1745682458}
   - {fileID: 1109419848}
   m_Father: {fileID: 1949456725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21293,7 +21296,6 @@ MonoBehaviour:
   - {fileID: 779111933}
   - {fileID: 658519134}
   - {fileID: 54005666}
-  canvas: {fileID: 1949456724}
 --- !u!1 &1128788468
 GameObject:
   m_ObjectHideFlags: 0
@@ -27457,6 +27459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1745682458}
   - component: {fileID: 1745682459}
+  - component: {fileID: 1745682460}
   m_Layer: 5
   m_Name: Toolbar
   m_TagString: Untagged
@@ -27478,12 +27481,12 @@ RectTransform:
   m_Children:
   - {fileID: 608510933}
   - {fileID: 39158407}
-  m_Father: {fileID: 1949456725}
+  m_Father: {fileID: 1111192566}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -423.24997, y: 100}
-  m_SizeDelta: {x: -45.5, y: 1080}
+  m_AnchoredPosition: {x: -423.24997, y: -390.206}
+  m_SizeDelta: {x: 1773.7684, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1745682459
 MonoBehaviour:
@@ -27498,6 +27501,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toolbarSlots:
+  - {fileID: 1583150374}
+  - {fileID: 737521192}
+  - {fileID: 924142016}
+  - {fileID: 450680999}
+  - {fileID: 1533778674}
+  - {fileID: 1610582770}
+  - {fileID: 1305147909}
+  - {fileID: 1897042557}
+  - {fileID: 338256525}
+--- !u!114 &1745682460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745682457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0895a12c476450342b307421e54aa233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryPanel: {fileID: 0}
+  player: {fileID: 865796913}
+  slots:
   - {fileID: 1583150374}
   - {fileID: 737521192}
   - {fileID: 924142016}
@@ -27834,7 +27861,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 432258993}
-  - {fileID: 1745682458}
   - {fileID: 1111192566}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
