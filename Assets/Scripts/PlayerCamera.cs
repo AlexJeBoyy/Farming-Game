@@ -4,17 +4,7 @@ using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
 {
-    //public Transform followTransform;
-
-
-    // Update is called once per frame
-    //void FixedUpdate()
-    //{
-    //    this.transform.position = new Vector3(followTransform.position.x, followTransform.position.y, this.transform.position.z);
-
-
-    //}
-
+  
     public Transform target; // The object the camera will follow
     public float smoothSpeed = 0.125f; // How smoothly the camera will follow the target
     public float minXBorder; // Minimum X position where camera stops following

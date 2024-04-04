@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1275142453207613834}
   - component: {fileID: 4408052102732690338}
   - component: {fileID: 6252111680851219633}
+  - component: {fileID: 8467236781587612991}
+  - component: {fileID: 7821289633691171844}
   m_Layer: 0
   m_Name: Collectible
   m_TagString: Untagged
@@ -122,7 +124,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -140,7 +142,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 4225921736030067553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f7e50fe954bae048ac64bde95ffbf94, type: 3}
+  m_Script: {fileID: 11500000, guid: 37d9f3b070f3b7e46a9d75f38719da25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+--- !u!50 &8467236781587612991
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4225921736030067553}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 3
+  m_LinearDrag: 1
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &7821289633691171844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4225921736030067553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa0a4f1f929d2c040a9009bad5213c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: aef73c912fa516844bbc9d16c4669650, type: 2}
+  rb2d: {fileID: 0}
