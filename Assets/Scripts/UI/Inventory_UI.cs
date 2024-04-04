@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory_UI : MonoBehaviour
 {
@@ -10,26 +11,55 @@ public class Inventory_UI : MonoBehaviour
     public Player player;
 
     public List<Slot_UI> slots = new List<Slot_UI>();
+
+
+
+    private Slot_UI draggedSlot;
+    private Image draggedIcon;
+    private Canvas canvas;
+    private bool dragSingle;
+
+    private void Awake()
+    {
+        canvas = FindObjectOfType<Canvas>();
+    }
+    private void Start()
+    {
+        Refresh();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             ToggleInventory();
+
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            dragSingle = true;
+        }
+        else
+        {
+            dragSingle = false;
         }
     }
 
     public void ToggleInventory()
     {
-        if (!inventoryPanel.activeSelf)
+        if (inventoryPanel != null)
         {
-            Time.timeScale = 0;
-            inventoryPanel.SetActive(true);
-            Refresh();
-        }
-        else
-        {
-            Time.timeScale = 1;
-            inventoryPanel.SetActive(false);
+            if (!inventoryPanel.activeSelf)
+            {
+                Time.timeScale = 0;
+                inventoryPanel.SetActive(true);
+                Refresh();
+            }
+            else
+            {
+                Time.timeScale = 1;
+                inventoryPanel.SetActive(false);
+            }
         }
     }
 
@@ -49,17 +79,88 @@ public class Inventory_UI : MonoBehaviour
                 }
             }
         }
+        else if (slots.Count == player.toolbar.slots.Count)
+        {
+            for (int i = 0; i < slots.Count; i++)
+            {
+                if (player.toolbar.slots[i].itemName != "")
+                {
+                    slots[i].SetItem(player.toolbar.slots[i]);
+                }
+                else
+                {
+                    slots[i].SetEmpty();
+                }
+            }
+        }
     }
 
-    public void Remove(int slotID)
+    public void Remove()
     {
-        Item itemToDrop = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[slotID].itemName);
+        Item itemToDrop = GameManager.instance.itemManager.GetItemByName(
+            player.inventory.slots[draggedSlot.slotID].itemName);
 
         if (itemToDrop != null)
         {
-            player.DropItem(itemToDrop);
-            player.inventory.Remove(slotID);
+            if (dragSingle)
+            {
+                player.DropItem(itemToDrop);
+                player.inventory.Remove(draggedSlot.slotID);
+
+            }
+            else
+            {
+                player.DropItem(itemToDrop, player.inventory.slots[draggedSlot.slotID].count);
+                player.inventory.Remove(draggedSlot.slotID, player.inventory.slots[draggedSlot.slotID].count);
+
+            }
             Refresh();
+        }
+
+        draggedSlot = null;
+
+    }
+
+    public void SlotBeginDrag(Slot_UI slot)
+    {
+        draggedSlot = slot;
+
+        draggedIcon = Instantiate(slot.itemIcon);
+        draggedIcon.raycastTarget = false;
+        draggedIcon.rectTransform.sizeDelta = new Vector2(60f, 60f);
+        draggedIcon.transform.SetParent(canvas.transform);
+
+        MoveToMousePosition(draggedIcon.gameObject);
+
+        Debug.Log("Start Drag: " + slot.name);
+    }
+
+    public void SlotDrag()
+    {
+        MoveToMousePosition(draggedIcon.gameObject);
+        Debug.Log("Dragging: " + draggedSlot.name);
+    }
+    public void SlotEndDrag()
+    {
+        Destroy(draggedIcon.gameObject);
+        draggedIcon = null;
+
+        //Debug.Log("Done dragging: " + draggedSlot.name);
+    }
+    public void SlotDrop(Slot_UI slot)
+    {
+        Debug.Log("Dropped" + draggedSlot.name + "on" + slot.name);
+    }
+    private void MoveToMousePosition(GameObject toMove)
+    {
+        if (canvas != null)
+        {
+            Vector2 position;
+
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform,
+                Input.mousePosition, null, out position);
+            toMove.transform.position = canvas.transform.TransformPoint(position);
+
         }
     }
 }
