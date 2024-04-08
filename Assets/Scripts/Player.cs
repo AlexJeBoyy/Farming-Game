@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Inventory inventory;
-    public Inventory toolbar;
+    public InventoryManager inventory;
+    
+
 
     private void Awake()
     {
-        inventory = new Inventory(27);
-        toolbar = new Inventory(9);
+        inventory = GetComponent<InventoryManager>();
     }
 
     private void Update()
