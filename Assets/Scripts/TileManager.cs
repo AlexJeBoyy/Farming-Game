@@ -4,28 +4,41 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 
+
 public class TileManager : MonoBehaviour
 {
     [SerializeField] private Tilemap interactableMap;
-    [SerializeField] private Tilemap cropMap;
     [SerializeField] private Tile hiddenInteractableTile;
+
+
     [SerializeField] private Tile plowedTile;
     [SerializeField] private Tile wateredTile;
 
+
+    [SerializeField] private Tilemap cropMap;
+    [SerializeField] private Tile weathTile;
+
+    
     void Start()
     {
-        foreach (var position in interactableMap.cellBounds.allPositionsWithin)
+        InitializeTilemaps();
+    }
+    void InitializeTilemaps()
+    {
+        InitializeTilemap(interactableMap);
+        InitializeTilemap(cropMap);
+    }
+    void InitializeTilemap(Tilemap tilemap)
+    {
+        foreach (var position in tilemap.cellBounds.allPositionsWithin)
         {
-            TileBase tile = interactableMap.GetTile(position);
-
+            TileBase tile = tilemap.GetTile(position);
             if (tile != null && tile.name == "Interactable_Visible")
             {
-                interactableMap.SetTile(position, hiddenInteractableTile);
+                tilemap.SetTile(position, hiddenInteractableTile);
             }
-
         }
     }
-    
     public void SetPlowed(Vector3Int position)
     {
         interactableMap.SetTile(position, plowedTile);
@@ -48,4 +61,6 @@ public class TileManager : MonoBehaviour
         }
         return "";
     }
+    
+
 }

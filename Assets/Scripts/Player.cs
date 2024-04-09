@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
+
 
 public class Player : MonoBehaviour
 {
+    public Crop crop;
     public InventoryManager inventoryManager;
     private TileManager tileManager;
     private void Awake()
     {
+        crop = GetComponent<Crop>();
         inventoryManager = GetComponent<InventoryManager>();
+        tileManager = GameManager.instance.tileManager;
     }
-    private void Start()
-    {
-         tileManager= GameManager.instance.tileManager;
-    }
+ 
 
     private void Update()
     {
@@ -38,6 +40,11 @@ public class Player : MonoBehaviour
                     {
                         tileManager.SetWatered(position);
                     }
+                    else if (tileName == "Watered")
+                    {
+                        PlantCrop(position);
+                        crop.Water();
+                    }
                 }
             }
         }
@@ -52,11 +59,25 @@ public class Player : MonoBehaviour
             Quaternion.identity);
         droppedItem.rb2d.AddForce(spawnOffset * 1f, ForceMode2D.Impulse);
     }
+
+  
     public void DropItem(Item item, int numToDop)
     {
         for(int i = 0; i < numToDop; i++)
         {
             DropItem(item);
         }
+    }
+
+    public void PlantCrop(Vector3Int position)
+    {
+        
+             switch (inventoryManager.toolbar.selectedSlot.itemName)
+        {
+            case "Wheat_Seed":
+                
+                break;
+        }
+
     }
 }

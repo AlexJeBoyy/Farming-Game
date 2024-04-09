@@ -1467,7 +1467,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: all the icons (gardens)_64
+      name: Sythe1
       rect:
         serializedVersion: 2
         x: 0
@@ -1488,7 +1488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: all the icons (gardens)_65
+      name: Sythe2
       rect:
         serializedVersion: 2
         x: 16
@@ -1509,7 +1509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: all the icons (gardens)_66
+      name: Sythe3
       rect:
         serializedVersion: 2
         x: 32
@@ -1530,7 +1530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: all the icons (gardens)_67
+      name: Sythe4
       rect:
         serializedVersion: 2
         x: 48
@@ -1981,6 +1981,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Sythe1: 185765843
+      Sythe2: 528238473
+      Sythe3: 513196381
+      Sythe4: 1137389257
       all the icons (gardens)_0: -930926212
       all the icons (gardens)_1: 1286974206
       all the icons (gardens)_10: -1525976211
@@ -2003,72 +2007,68 @@ TextureImporter:
       all the icons (gardens)_3: -1839732101
       all the icons (gardens)_30: 2108493887
       all the icons (gardens)_31: 1455911041
-      all the icons (gardens)_32: -1643769743
-      all the icons (gardens)_33: 1619407350
-      all the icons (gardens)_34: 945551185
-      all the icons (gardens)_35: 73552322
-      all the icons (gardens)_36: 1765402061
-      all the icons (gardens)_37: -1733083497
-      all the icons (gardens)_38: -459138454
-      all the icons (gardens)_39: 477619026
-      all the icons (gardens)_4: 1665535444
-      all the icons (gardens)_44: -1209493108
-      all the icons (gardens)_45: 1385908150
-      all the icons (gardens)_46: 1705681194
-      all the icons (gardens)_47: 107636249
-      all the icons (gardens)_48: 84915974
-      all the icons (gardens)_49: -1442710473
-      all the icons (gardens)_5: -1831562642
-      all the icons (gardens)_50: 2066843521
-      all the icons (gardens)_51: -1008285073
-      all the icons (gardens)_52: 802689231
-      all the icons (gardens)_53: 65288527
-      all the icons (gardens)_54: 1270810183
-      all the icons (gardens)_55: 586831109
-      all the icons (gardens)_56: 469433253
-      all the icons (gardens)_57: 1007837975
-      all the icons (gardens)_58: -2001210042
-      all the icons (gardens)_59: -513783341
-      all the icons (gardens)_6: -1905214475
-      all the icons (gardens)_60: -1355738571
-      all the icons (gardens)_61: 400916072
-      all the icons (gardens)_62: -703562949
-      all the icons (gardens)_63: -977333090
-      all the icons (gardens)_64: 1221630886
-      all the icons (gardens)_65: -380210594
-      all the icons (gardens)_66: 63829182
-      all the icons (gardens)_67: -1527170739
-      all the icons (gardens)_68: 2129596488
-      all the icons (gardens)_69: 2012820012
-      all the icons (gardens)_7: 1892734709
-      all the icons (gardens)_70: -1189510685
-      all the icons (gardens)_71: -588602100
-      all the icons (gardens)_72: -1670662385
-      all the icons (gardens)_73: 555170091
-      all the icons (gardens)_74: 844187321
-      all the icons (gardens)_75: 1177630987
-      all the icons (gardens)_76: -1311955936
-      all the icons (gardens)_77: -1582853422
-      all the icons (gardens)_78: 1383820965
-      all the icons (gardens)_79: -1148407297
-      all the icons (gardens)_8: -1813676598
-      all the icons (gardens)_80: 544027392
-      all the icons (gardens)_81: -262545209
-      all the icons (gardens)_82: 267572497
-      all the icons (gardens)_83: 1303334135
-      all the icons (gardens)_84: -1245818561
-      all the icons (gardens)_85: 185765843
-      all the icons (gardens)_86: 528238473
-      all the icons (gardens)_87: 513196381
-      all the icons (gardens)_9: 1137389257
-      hoe 1: 2128258377
-      hoe 2: 1336755422
-      hoe 3: -342008758
-      hoe 4: 1326852320
-      wateringcan 1: 1153149903
-      wateringcan 2: 1068632798
-      wateringcan 3: 1173993276
-      wateringcan 4: -858302801
+      all the icons (gardens)_32: 1765402061
+      all the icons (gardens)_33: -1733083497
+      all the icons (gardens)_34: -459138454
+      all the icons (gardens)_35: 477619026
+      all the icons (gardens)_36: 1665535444
+      all the icons (gardens)_37: -1209493108
+      all the icons (gardens)_38: 1385908150
+      all the icons (gardens)_39: 1705681194
+      all the icons (gardens)_4: 107636249
+      all the icons (gardens)_44: 84915974
+      all the icons (gardens)_45: -1442710473
+      all the icons (gardens)_46: -1831562642
+      all the icons (gardens)_47: 2066843521
+      all the icons (gardens)_48: -1008285073
+      all the icons (gardens)_49: 802689231
+      all the icons (gardens)_5: 65288527
+      all the icons (gardens)_50: 1270810183
+      all the icons (gardens)_51: 586831109
+      all the icons (gardens)_52: 469433253
+      all the icons (gardens)_53: 1007837975
+      all the icons (gardens)_54: -2001210042
+      all the icons (gardens)_55: -513783341
+      all the icons (gardens)_56: -1905214475
+      all the icons (gardens)_57: -1355738571
+      all the icons (gardens)_58: 400916072
+      all the icons (gardens)_59: -703562949
+      all the icons (gardens)_6: -977333090
+      all the icons (gardens)_60: 1221630886
+      all the icons (gardens)_61: -380210594
+      all the icons (gardens)_62: 63829182
+      all the icons (gardens)_63: -1527170739
+      all the icons (gardens)_68: -588602100
+      all the icons (gardens)_69: -1670662385
+      all the icons (gardens)_7: 555170091
+      all the icons (gardens)_70: 844187321
+      all the icons (gardens)_71: 1177630987
+      all the icons (gardens)_72: -1311955936
+      all the icons (gardens)_73: -1582853422
+      all the icons (gardens)_74: 1383820965
+      all the icons (gardens)_75: -1148407297
+      all the icons (gardens)_76: -1813676598
+      all the icons (gardens)_77: 544027392
+      all the icons (gardens)_78: -262545209
+      all the icons (gardens)_79: 267572497
+      all the icons (gardens)_8: 1303334135
+      all the icons (gardens)_80: -1245818561
+      all the icons (gardens)_81: 185765843
+      all the icons (gardens)_82: 528238473
+      all the icons (gardens)_83: 513196381
+      all the icons (gardens)_84: 1137389257
+      all the icons (gardens)_85: 2128258377
+      all the icons (gardens)_86: 1336755422
+      all the icons (gardens)_87: -342008758
+      all the icons (gardens)_9: 1326852320
+      hoe 1: 1153149903
+      hoe 2: 1068632798
+      hoe 3: 1173993276
+      hoe 4: -858302801
+      wateringcan 1: -1643769743
+      wateringcan 2: 1619407350
+      wateringcan 3: 945551185
+      wateringcan 4: 73552322
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
