@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df94fa5757c0fc4685206689c3b0432, type: 3}
   m_Name: Wheat
   m_EditorClassIdentifier: 
-  daysToGrow: 0
-  growProgressSprites: []
-  readyToHarvestSprite: {fileID: 0}
-  purchasePrice: 0
-  sellPrice: 0
+  daysToGrow: 1
+  growProgressSprites:
+  - {fileID: -466888286, guid: 1b6a01c7f24809a4ebfe845844936f4b, type: 3}
+  - {fileID: -722635205, guid: 1b6a01c7f24809a4ebfe845844936f4b, type: 3}
+  - {fileID: 204297094, guid: 1b6a01c7f24809a4ebfe845844936f4b, type: 3}
+  - {fileID: 1054116566, guid: 1b6a01c7f24809a4ebfe845844936f4b, type: 3}
+  readyToHarvestSprite: {fileID: 1054116566, guid: 1b6a01c7f24809a4ebfe845844936f4b, type: 3}
+  purchasePrice: 10
+  sellPrice: 20

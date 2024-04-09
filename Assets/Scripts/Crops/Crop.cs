@@ -12,6 +12,24 @@ public class Crop : MonoBehaviour
     public static event UnityAction<CropData> onPlantCrop;
     public static event UnityAction<CropData> onHarvestCrop;
 
+    public void Plant(CropData crop)
+    {
+        curCrop = crop;
+        plantDay = GameManager.instance.curDay;
+        daysSinceLastWatered = 1;
+        UpdateCropSprite();
+        onPlantCrop?.Invoke(crop);
+    }
+    public void NewDayCheck()
+    {
+        daysSinceLastWatered++;
+        if (daysSinceLastWatered > 3)
+        {
+            Destroy(gameObject);
+        }
+        UpdateCropSprite();
+    }
+
     void UpdateCropSprite()
     {
         int cropProg = CropProgress();
@@ -47,5 +65,6 @@ public class Crop : MonoBehaviour
     {
         return CropProgress() >= curCrop.daysToGrow;
     }
+   
 
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
+//using UnityEngine.WSA;
 
 
 public class TileManager : MonoBehaviour
@@ -13,14 +14,16 @@ public class TileManager : MonoBehaviour
 
     [SerializeField] private Tile plowedTile;
     [SerializeField] private Tile wateredTile;
-
+    [SerializeField] private Tile wheatTile;
 
     [SerializeField] private Tilemap cropMap;
-    [SerializeField] private Tile weathTile;
 
-    
+
+    public Player player;
+
     void Start()
     {
+        player = GetComponent<Player>();
         InitializeTilemaps();
     }
     void InitializeTilemaps()
@@ -47,7 +50,10 @@ public class TileManager : MonoBehaviour
     {
         interactableMap.SetTile(position, wateredTile);
     }
-
+    public void PlantWheat(Vector3Int position)
+    {
+        cropMap.SetTile(position, wheatTile);
+    }
     public string GetTileName(Vector3Int position)
     {
         if (interactableMap != null)
@@ -61,6 +67,6 @@ public class TileManager : MonoBehaviour
         }
         return "";
     }
-    
+
 
 }

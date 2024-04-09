@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6252111680851219633}
   - component: {fileID: 8467236781587612991}
   - component: {fileID: 7821289633691171844}
+  - component: {fileID: 1727605834177966599}
   m_Layer: 0
   m_Name: Wheat_Seed
   m_TagString: Untagged
@@ -186,3 +187,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: aef73c912fa516844bbc9d16c4669650, type: 2}
   rb2d: {fileID: 0}
+--- !u!114 &1727605834177966599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4225921736030067553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c744e5a450bacfd4086b3961c852ede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 1275142453207613834}
