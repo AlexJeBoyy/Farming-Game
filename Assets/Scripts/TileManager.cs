@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 public class TileManager : MonoBehaviour
 {
     [SerializeField] private Tilemap interactableMap;
+    [SerializeField] private Tilemap cropMap;
     [SerializeField] private Tile hiddenInteractableTile;
     [SerializeField] private Tile plowedTile;
     [SerializeField] private Tile wateredTile;

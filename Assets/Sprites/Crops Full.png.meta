@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crops Full_0
+      name: Empty_Seed
       rect:
         serializedVersion: 2
         x: 0
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_1
+      name: DeathCrop_1
       rect:
         serializedVersion: 2
         x: 16
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_2
+      name: DeathCrop_2
       rect:
         serializedVersion: 2
         x: 32
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_3
+      name: DeathCrop_3
       rect:
         serializedVersion: 2
         x: 48
@@ -207,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_4
+      name: Plowed_Tile
       rect:
         serializedVersion: 2
         x: 64
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_5
+      name: Plowed_Watered_Tile
       rect:
         serializedVersion: 2
         x: 80
@@ -459,7 +459,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_18
+      name: Carrot_Seed
       rect:
         serializedVersion: 2
         x: 256
@@ -480,7 +480,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_19
+      name: Carrot_Item
       rect:
         serializedVersion: 2
         x: 272
@@ -501,7 +501,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_20
+      name: Carrot_1
       rect:
         serializedVersion: 2
         x: 288
@@ -522,7 +522,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_21
+      name: Carrot_2
       rect:
         serializedVersion: 2
         x: 304
@@ -543,7 +543,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_22
+      name: Carrot_3
       rect:
         serializedVersion: 2
         x: 320
@@ -564,7 +564,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_30
+      name: Potato_Seed
       rect:
         serializedVersion: 2
         x: 0
@@ -585,7 +585,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_31
+      name: Potato_Item
       rect:
         serializedVersion: 2
         x: 16
@@ -606,7 +606,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_32
+      name: Potato_1
       rect:
         serializedVersion: 2
         x: 32
@@ -627,7 +627,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_33
+      name: Potato_2
       rect:
         serializedVersion: 2
         x: 48
@@ -648,7 +648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_34
+      name: Potato_3
       rect:
         serializedVersion: 2
         x: 64
@@ -963,27 +963,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_49
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 304
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5559b762e9ce2fa4380a2ea45ad3e8bc
-      internalID: -46680155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Crops Full_50
       rect:
         serializedVersion: 2
@@ -1110,7 +1089,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_56
+      name: Union_Seed
       rect:
         serializedVersion: 2
         x: 128
@@ -1131,7 +1110,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_57
+      name: Union_Item
       rect:
         serializedVersion: 2
         x: 144
@@ -1152,7 +1131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_58
+      name: Union_1
       rect:
         serializedVersion: 2
         x: 160
@@ -1173,7 +1152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_59
+      name: Union_2
       rect:
         serializedVersion: 2
         x: 176
@@ -1194,15 +1173,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_60
+      name: Union_3
       rect:
         serializedVersion: 2
         x: 192
         y: 288
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1467,7 +1446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_76
+      name: Garlic_Seed
       rect:
         serializedVersion: 2
         x: 128
@@ -1488,7 +1467,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_77
+      name: Garlic_Item
       rect:
         serializedVersion: 2
         x: 144
@@ -1509,7 +1488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_78
+      name: Garlic_1
       rect:
         serializedVersion: 2
         x: 160
@@ -1530,7 +1509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_79
+      name: Garlic_2
       rect:
         serializedVersion: 2
         x: 176
@@ -1551,7 +1530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_80
+      name: Garlic_3
       rect:
         serializedVersion: 2
         x: 192
@@ -2832,7 +2811,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_155
+      name: Wheat_Seed
       rect:
         serializedVersion: 2
         x: 0
@@ -2853,7 +2832,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_156
+      name: Wheat_Item
       rect:
         serializedVersion: 2
         x: 16
@@ -2874,7 +2853,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_157
+      name: Wheat_1
       rect:
         serializedVersion: 2
         x: 32
@@ -2895,7 +2874,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_158
+      name: Wheat_2
       rect:
         serializedVersion: 2
         x: 48
@@ -2916,7 +2895,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_159
+      name: Wheat_3
       rect:
         serializedVersion: 2
         x: 64
@@ -2937,7 +2916,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops Full_160
+      name: Wheat_4
       rect:
         serializedVersion: 2
         x: 80
@@ -4602,7 +4581,7 @@ TextureImporter:
         x: 336
         y: 0
         width: 16
-        height: 321
+        height: 32
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4628,8 +4607,11 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       0: -135900447
-      Crops Full_0: -690709749
-      Crops Full_1: 1531114634
+      Carrot_1: 1629814298
+      Carrot_2: -162933770
+      Carrot_3: -862764605
+      Carrot_Item: 1313486437
+      Carrot_Seed: -2081886649
       Crops Full_10: -4552216
       Crops Full_100: 131191744
       Crops Full_101: -349756379
@@ -4690,13 +4672,7 @@ TextureImporter:
       Crops Full_151: -1109371091
       Crops Full_152: -11513749
       Crops Full_153: -272301476
-      Crops Full_155: 2144926304
-      Crops Full_156: -806969140
-      Crops Full_157: -466888286
-      Crops Full_158: -722635205
-      Crops Full_159: 204297094
       Crops Full_16: -1951470991
-      Crops Full_160: 1054116566
       Crops Full_161: -599911240
       Crops Full_162: 1430570712
       Crops Full_163: 1205345263
@@ -4717,7 +4693,6 @@ TextureImporter:
       Crops Full_177: 1986316026
       Crops Full_178: -1762903735
       Crops Full_179: -89356049
-      Crops Full_18: -2081886649
       Crops Full_180: -1045194063
       Crops Full_181: -1176393999
       Crops Full_182: -93434079
@@ -4728,7 +4703,6 @@ TextureImporter:
       Crops Full_187: -1787113321
       Crops Full_188: 1993045883
       Crops Full_189: -2004770704
-      Crops Full_19: 1313486437
       Crops Full_190: -378599057
       Crops Full_191: 1610024313
       Crops Full_192: 965722358
@@ -4739,8 +4713,6 @@ TextureImporter:
       Crops Full_197: 1619201380
       Crops Full_198: -1634416813
       Crops Full_199: -1695978339
-      Crops Full_2: -1282467632
-      Crops Full_20: 1629814298
       Crops Full_200: 23790965
       Crops Full_201: -2075309424
       Crops Full_202: -1122994755
@@ -4751,7 +4723,6 @@ TextureImporter:
       Crops Full_207: 1658673517
       Crops Full_208: -1394692144
       Crops Full_209: 1313523594
-      Crops Full_21: -162933770
       Crops Full_210: -253741734
       Crops Full_211: -323783063
       Crops Full_212: -1078839973
@@ -4762,7 +4733,6 @@ TextureImporter:
       Crops Full_217: 1322666931
       Crops Full_218: 749225767
       Crops Full_219: 777258398
-      Crops Full_22: -862764605
       Crops Full_220: -1397544514
       Crops Full_221: -1056674620
       Crops Full_222: -555929745
@@ -4808,18 +4778,11 @@ TextureImporter:
       Crops Full_27: -1059746416
       Crops Full_28: 1504855198
       Crops Full_29: -2135455290
-      Crops Full_3: 1163286960
-      Crops Full_30: -1730626038
-      Crops Full_31: 215094381
-      Crops Full_32: 650574229
-      Crops Full_33: 986563313
-      Crops Full_34: 1838217207
       Crops Full_35: -286194515
       Crops Full_36: -1944841910
       Crops Full_37: 493192156
       Crops Full_38: 797425323
       Crops Full_39: -818474388
-      Crops Full_4: -447763564
       Crops Full_40: -1686798286
       Crops Full_41: -179082628
       Crops Full_42: -806452073
@@ -4830,19 +4793,13 @@ TextureImporter:
       Crops Full_47: 437005281
       Crops Full_48: 704558724
       Crops Full_49: -46680155
-      Crops Full_5: 40492699
       Crops Full_50: -145003889
       Crops Full_51: -1781698040
       Crops Full_52: -810896021
       Crops Full_53: 2004062420
       Crops Full_54: 1549999238
       Crops Full_55: 1559743477
-      Crops Full_56: -1427351459
-      Crops Full_57: 357372938
-      Crops Full_58: 1214617016
-      Crops Full_59: 2100862631
       Crops Full_6: -2028686384
-      Crops Full_60: -396951535
       Crops Full_61: -744036233
       Crops Full_62: -145396154
       Crops Full_63: -1461423448
@@ -4859,12 +4816,7 @@ TextureImporter:
       Crops Full_73: 1866191296
       Crops Full_74: 1515740308
       Crops Full_75: -1328554378
-      Crops Full_76: -657463410
-      Crops Full_77: 352685619
-      Crops Full_78: 1233035713
-      Crops Full_79: -1355506419
       Crops Full_8: 1965870133
-      Crops Full_80: 394239969
       Crops Full_81: -97620901
       Crops Full_82: 284609540
       Crops Full_83: 1045284274
@@ -4885,6 +4837,33 @@ TextureImporter:
       Crops Full_97: 80480635
       Crops Full_98: -739528882
       Crops Full_99: -937180672
+      DeathCrop_1: 1531114634
+      DeathCrop_2: -1282467632
+      DeathCrop_3: 1163286960
+      Empty_Seed: -690709749
+      Garlic_1: 1233035713
+      Garlic_2: -1355506419
+      Garlic_3: 394239969
+      Garlic_Item: 352685619
+      Garlic_Seed: -657463410
+      Plowed_Tile: -447763564
+      Plowed_Watered_Tile: 40492699
+      Potato_1: 650574229
+      Potato_2: 986563313
+      Potato_3: 1838217207
+      Potato_Item: 215094381
+      Potato_Seed: -1730626038
+      Union_1: 1214617016
+      Union_2: 2100862631
+      Union_3: -396951535
+      Union_Item: 357372938
+      Union_Seed: -1427351459
+      Wheat_1: -466888286
+      Wheat_2: -722635205
+      Wheat_3: 204297094
+      Wheat_4: 1054116566
+      Wheat_Item: -806969140
+      Wheat_Seed: 2144926304
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

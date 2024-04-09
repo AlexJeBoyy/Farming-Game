@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6eec32bfdbca8c4c92642cc8dd0479d, type: 3}
   m_Name: Watering_Can
   m_EditorClassIdentifier: 
-  itemName: Item name
-  icon: {fileID: 0}
+  itemName: Watering Can
+  icon: {fileID: 1153149903, guid: a60938aef9c0be94689e2372d237e1bb, type: 3}
