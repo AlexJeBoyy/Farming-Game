@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Inventory 
+public class Inventory
 {
 
     [System.Serializable]
@@ -26,7 +26,7 @@ public class Inventory
         {
             get
             {
-                if(itemName == "" && count == 0)
+                if (itemName == "" && count == 0)
                 {
                     return true;
                 }
@@ -35,7 +35,7 @@ public class Inventory
         }
         public bool CanAddItem(string itemName)
         {
-            if(this.itemName == itemName && count < maxAllowed)
+            if (this.itemName == itemName && count < maxAllowed)
             {
                 return true;
             }
@@ -54,7 +54,7 @@ public class Inventory
             this.itemName = itemName;
             this.icon = icon;
             count++;
-            this.maxAllowed = maxAllowed;   
+            this.maxAllowed = maxAllowed;
 
         }
         public void RemoveItem()
@@ -73,9 +73,10 @@ public class Inventory
     }
 
     public List<Slot> slots = new List<Slot>();
+    public Slot selectedSlot = null;
 
-    public Inventory(int numSlots) 
-    { 
+    public Inventory(int numSlots)
+    {
         for (int i = 0; i < numSlots; i++)
         {
             Slot slot = new Slot();
@@ -87,7 +88,7 @@ public class Inventory
     {
         foreach (Slot slot in slots)
         {
-           if (slot.itemName == item.data.itemName && slot.CanAddItem(item.data.itemName))
+            if (slot.itemName == item.data.itemName && slot.CanAddItem(item.data.itemName))
             {
                 slot.AddItem(item);
                 return;
@@ -99,7 +100,7 @@ public class Inventory
             if (slot.itemName == "")
             {
                 slot.AddItem(item);
-                return ;
+                return;
             }
         }
     }
@@ -111,7 +112,7 @@ public class Inventory
     {
         if (slots[index].count >= numToRemove)
         {
-            for(int i = 0;i < numToRemove; i++)
+            for (int i = 0; i < numToRemove; i++)
             {
                 Remove(index);
             }
@@ -119,16 +120,27 @@ public class Inventory
     }
     public void MoveSlot(int fromIndex, int toIndex, Inventory toInventory, int numToMove = 1)
     {
-        Slot fromSlot = slots[fromIndex];
-        Slot toSlot = toInventory.slots[toIndex];
-
-        if (toSlot.isEmpty || toSlot.CanAddItem(fromSlot.itemName))
+        if (slots != null && slots.Count > 0)
         {
+            Slot fromSlot = slots[fromIndex];
+            Slot toSlot = toInventory.slots[toIndex];
+
             for (int i = 0; i < numToMove; i++)
             {
-                toSlot.AddItem(fromSlot.itemName, fromSlot.icon, fromSlot.maxAllowed);
-                fromSlot.RemoveItem();  
+                if (toSlot.isEmpty || toSlot.CanAddItem(fromSlot.itemName))
+                {
+                    toSlot.AddItem(fromSlot.itemName, fromSlot.icon, fromSlot.maxAllowed);
+                    fromSlot.RemoveItem();
+                }
             }
+        }
+    }
+
+    public void SelectSlot(int index)
+    {
+        if (slots != null && slots.Count > 0)
+        {
+            selectedSlot = slots[index];
         }
     }
 }

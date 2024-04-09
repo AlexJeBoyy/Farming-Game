@@ -6,16 +6,21 @@ public class Toolbar_UI : MonoBehaviour
 {
     [SerializeField] private List<Slot_UI> toolbarSlots = new List<Slot_UI>();
 
-    private Slot_UI selectedSlot;
-
-    private void Start()
+    private Slot_UI selectedSlot = null;
+private void Start()
     {
         SelectSlot(0);
     }
+    
     private void Update()
     {
         CheckAlphaNumericKeys();
 
+    }
+    
+    public void SelectSlot(Slot_UI slot)
+    {
+        SelectSlot(slot.slotID);
     }
     public void SelectSlot(int index)
     {
@@ -27,6 +32,8 @@ public class Toolbar_UI : MonoBehaviour
             }
             selectedSlot = toolbarSlots[index];
             selectedSlot.SetHighlight(true);
+
+            GameManager.instance.player.inventoryManager.toolbar.SelectSlot(index);
         }
     }
 
