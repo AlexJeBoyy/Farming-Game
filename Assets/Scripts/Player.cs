@@ -10,10 +10,13 @@ public class Player : MonoBehaviour
     private Crop crop;
     public InventoryManager inventoryManager;
     private TileManager tileManager;
+    public Item WheatItem;
+
+    
+
     private void Awake()
     {
         crop = GetComponent<Crop>();
-        inventoryManager = GetComponent<InventoryManager>();
         tileManager = GameManager.instance.tileManager;
     }
 
@@ -28,6 +31,7 @@ public class Player : MonoBehaviour
                     (int)transform.position.y, 0);
 
                 string tileName = tileManager.GetTileName(position);
+                string cropName = tileManager.GetPlantName(position);
 
 
                 if (!string.IsNullOrWhiteSpace(tileName))
@@ -41,9 +45,16 @@ public class Player : MonoBehaviour
                         tileManager.SetWatered(position);
                         
                     }
-                    else if (tileName == "Plowed_Water")
+                    else if (tileName == "Plowed_Water" && cropName != "Wheat_1" && cropName != "Wheat_2" && cropName != "Wheat_3" && cropName != "Wheat_4")
                     {
                         PlantCrop(position);
+                    }
+                    else if (inventoryManager.toolbar.selectedSlot.itemName == "Sythe" && cropName == "Wheat_4")
+                    {
+                        int rnd = Random.Range(1, 3);
+                        DropItem2(WheatItem, rnd);
+                        tileManager.ClearTile(position);
+                        
                     }
                 }
             }
@@ -59,13 +70,28 @@ public class Player : MonoBehaviour
             Quaternion.identity);
         droppedItem.rb2d.AddForce(spawnOffset * 1f, ForceMode2D.Impulse);
     }
-     
+    public void DropItem2(Item item)
+    {
+        Vector2 spawnLocation = transform.position;
+        Vector2 spawnOffset = Random.insideUnitCircle * 1.1f;
+
+        Item droppedItem = Instantiate(item, spawnLocation + spawnOffset,
+            Quaternion.identity);
+        droppedItem.rb2d1.AddForce(spawnOffset * 1f, ForceMode2D.Impulse);
+    }
+
 
     public void DropItem(Item item, int numToDop)
     {
         for (int i = 0; i < numToDop; i++)
         {
             DropItem(item);
+        }
+    } public void DropItem2(Item item, int numToDop)
+    {
+        for (int i = 0; i < numToDop; i++)
+        {
+            DropItem2(item);
         }
     }
 

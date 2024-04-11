@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public int money;
     public int cropInventory;
     public CropData selectedCropToPlant;
-    public event UnityAction onNewDay;
+    //public event UnityAction onNewDay;
 
     public void Awake()
     {
@@ -40,37 +40,6 @@ public class GameManager : MonoBehaviour
         player = FindObjectOfType<Player>();
     }
 
-    void OnEnable()
-    {
-        Crop.onPlantCrop += OnPlantCrop;
-        Crop.onHarvestCrop += OnHarvestCrop;
-    }
-    void OnDisable()
-    {
-        Crop.onPlantCrop -= OnPlantCrop;
-        Crop.onHarvestCrop -= OnHarvestCrop;
-    }
-
-    // Called when a crop has been planted.
-    // Listening to the Crop.onPlantCrop event.
-    public void OnPlantCrop(CropData cop)
-    {
-        cropInventory--;
-    }
-    // Called when a crop has been harvested.
-    // Listening to the Crop.onCropHarvest event.
-    public void OnHarvestCrop(CropData crop)
-    {
-        money += crop.sellPrice;
-    }
-    // Called when we want to purchase a crop.
-    public void PurchaseCrop(CropData crop)
-    {
-    }
-    // Do we have enough crops to plant?
+   
     
-    // Called when the buy crop button is pressed.
-    public void OnBuyCropButton(CropData crop)
-    {
-    }
 }

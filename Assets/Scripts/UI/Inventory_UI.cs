@@ -74,7 +74,7 @@ public class Inventory_UI : MonoBehaviour
         UI_Manager.draggedIcon = Instantiate(slot.itemIcon);
         UI_Manager.draggedIcon.transform.SetParent(canvas.transform);
         UI_Manager.draggedIcon.raycastTarget = false;
-        UI_Manager.draggedIcon.rectTransform.sizeDelta = new Vector2(60f, 60f);
+        UI_Manager.draggedIcon.rectTransform.sizeDelta = new Vector2(100f, 100f);
 
         MoveToMousePosition(UI_Manager.draggedIcon.gameObject);
     }
